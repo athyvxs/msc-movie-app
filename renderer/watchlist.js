@@ -1,4 +1,3 @@
-
 const savedMoviesDiv = document.getElementById("savedMovies");
 const calculateBtn = document.getElementById("calculateBtn");
 const totalDuration = document.getElementById("totalDuration");
