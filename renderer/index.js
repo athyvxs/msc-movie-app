@@ -50,7 +50,7 @@ async function fetchMovies(url, selectedGenre = "") {
     }
 }
 
-// Student-written movie recommendation logic
+// movie recommendation logic
 function getMovieRecommendation(movie) {
     const rating = Number(movie.vote_average) || 0;
     const votes = Number(movie.vote_count) || 0;
