@@ -1,5 +1,4 @@
-
-/* ===== MSC GOTHIC COLOUR PALETTE ===== */
+/* ===== NETFLIX INSPIRED===== */
 
 :root {
     --black: #0D0D0E;
@@ -237,3 +236,21 @@ button:disabled {
         max-width: calc(100% - 20px);
     }
 }
+
+/* ===== FIX SEARCH AND GENRE ALIGNMENT ONLY ===== */
+
+#movieInput,
+#genreSelect {
+    width: 350px;
+    max-width: 100%;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+#searchBtn,
+#recommendBtn {
+    width: 190px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
