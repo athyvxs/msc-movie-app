@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSC - Movie Discovery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1> MSC Movie Planner</h1>
+    <p>Discover dark delights and build your perfect watchlist.</p>
+
+    <h2>Search Movies</h2>
+    <input type="text" id="movieInput"
+           placeholder="Enter movie title">
+    <button id="searchBtn">Search</button>
+
+    <h2>Find Movies by Genre</h2>
+    <select id="genreSelect">
+        <option value="">Select Genre</option>
+        <option value="28">Action</option>
+        <option value="35">Comedy</option>
+        <option value="27">Horror</option>
+        <option value="10749">Romance</option>
+        <option value="878">Science Fiction</option>
+        <option value="16">Animation</option>
+    </select>
+
+    <button id="recommendBtn">Suggest Movies</button>
+
+    <h2>Movie Results</h2>
+    <div id="movieResults"></div>
+
+    <button id="watchlistBtn">📋 My Watchlist</button>
+
+    <script src="index.js"></script>
+</body>
+</html>

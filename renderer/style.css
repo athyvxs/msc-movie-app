@@ -1,0 +1,239 @@
+
+/* ===== MSC GOTHIC COLOUR PALETTE ===== */
+
+:root {
+    --black: #0D0D0E;
+    --dark-red: #28050B;
+    --rustic-red: #39141B;
+    --brown: #59463B;
+    --taupe: #86776B;
+    --cream: #F5EDE7;
+    --muted: #D8C8BF;
+}
+
+/* ===== GENERAL LAYOUT ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        to bottom right,
+        var(--black),
+        var(--dark-red)
+    );
+    background-attachment: fixed;
+    color: var(--cream);
+    margin: 0;
+    padding: 30px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    color: var(--cream);
+    font-size: 40px;
+    margin: 0 0 15px;
+}
+
+h2 {
+    color: var(--taupe);
+    margin: 30px 0 15px;
+}
+
+p {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+/* ===== INPUTS AND DROPDOWNS ===== */
+
+input,
+select {
+    width: 280px;
+    max-width: 100%;
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid var(--taupe);
+    border-radius: 10px;
+    background-color: var(--brown);
+    color: var(--cream);
+    font-size: 15px;
+    outline: none;
+}
+
+input::placeholder {
+    color: var(--muted);
+}
+
+input:focus,
+select:focus {
+    border-color: var(--cream);
+}
+
+/* ===== BUTTONS ===== */
+
+button {
+    background-color: var(--rustic-red);
+    color: var(--cream);
+    border: none;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--brown);
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#watchlistBtn {
+    background-color: var(--taupe);
+    color: var(--black);
+}
+
+#watchlistBtn:hover {
+    background-color: var(--brown);
+    color: var(--cream);
+}
+
+/* ===== MOVIE RESULTS AND WATCHLIST ===== */
+
+#movieResults,
+#savedMovies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    margin: 25px auto;
+    max-width: 1200px;
+}
+
+/* ===== MOVIE CARDS ===== */
+
+.movie-card {
+    background-color: var(--brown);
+    border: 1px solid var(--taupe);
+    border-radius: 16px;
+    width: 280px;
+    max-width: 100%;
+    padding: 20px;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.movie-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.movie-card h3 {
+    color: var(--cream);
+    font-size: 20px;
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+
+.movie-card p {
+    color: #E7D8CF;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+/* ===== WATCHLIST STATUS DROPDOWN ===== */
+
+.movie-card select {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 12px 0;
+    padding: 12px;
+
+    background-color: var(--brown);
+    color: var(--cream);
+    border: 1px solid var(--taupe);
+    border-radius: 10px;
+}
+
+.movie-card select:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+/* ===== MOVIE CARD BUTTONS ===== */
+
+.movie-card button {
+    margin: 10px 5px 5px 0;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+/* ===== MOVIE RECOMMENDATION ===== */
+
+.movie-suggestion {
+    background-color: var(--rustic-red);
+    border-left: 4px solid var(--taupe);
+    border-radius: 6px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* ===== MARATHON CALCULATOR ===== */
+
+#totalDuration {
+    color: var(--cream);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+/* ===== SMALL WINDOW RESPONSIVENESS ===== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .movie-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    input,
+    select {
+        max-width: calc(100% - 20px);
+    }
+}
